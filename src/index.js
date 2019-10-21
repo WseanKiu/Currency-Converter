@@ -1,7 +1,8 @@
 import React from 'react';
 import EstyleSheet from 'react-native-extended-stylesheet';
 
-import Themes from './containers/Themes';
+import Navigator from './config/routes';
+import { AlertProvider } from './components/Alert';
 
 EstyleSheet.build({
 
@@ -19,4 +20,4 @@ EstyleSheet.build({
   // $outline: 1,
 })
 
-export default () => <Themes/>;
+export default () => <AlertProvider><Navigator/></AlertProvider>;
